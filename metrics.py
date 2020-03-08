@@ -14,11 +14,13 @@ def ssim(img1, img2):
     return structural_similarity(img2, img1, data_range=img1.max()- img1.min(), multichannel=True)
 
 def csv(img1, img2):
-    return 0.5
+    #TODO
+    pass
     
 
 def unique(img1,img2):
-    return 0.5
+    #TODO
+    pass
 
     
 
