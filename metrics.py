@@ -10,7 +10,7 @@ def histogram(img1):
     return (np.bincount(im,minlength = 256),np.arange(256))
     
 
-def compute_stats(paths,titles,orig_path):
+def compute_stats(paths,titles,orig_path,gray):
     eng = matlab.engine.start_matlab()
-    eng.compute_stats(paths,titles,orig_path,nargout=0)
+    eng.compute_stats(paths,titles,orig_path,gray,nargout=0)
     eng.quit()

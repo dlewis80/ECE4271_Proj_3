@@ -1,4 +1,3 @@
-
 import metrics as mt
 import dippykit as dip
 import matplotlib.pyplot as plt
@@ -85,7 +84,7 @@ if __name__ == "__main__":
             paths.append(path+'_restored.bmp')
 
         if stats:
-            mt.compute_stats(paths,titles,orig_path)
+            mt.compute_stats(paths,titles,orig_path,False)
     
     if show:
         plt.show()
