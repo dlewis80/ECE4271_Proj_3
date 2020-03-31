@@ -13,7 +13,7 @@ def restore_underexposure(img):
 if __name__ == "__main__":
 
     f_basename = ("brussels3", "espresso_square", "wiseonRocks_square", "ownpic1", "ownpic2")
-    rang1 = (0,1,2,3,4) # 0,1,2,3,4
+    rang1 = (0,) # 0,1,2,3,4
     rang2 = (1,2,3,4,5) # 1,2,3,4,5
     histograms = False
     stats = True
@@ -48,7 +48,7 @@ if __name__ == "__main__":
             title = f_basename[j] + " underexposure level: " + str(i)
             titles.append(title)
             #rec_img = prc.wt_bayes(img)
-            rec_img = dip.image_io.float_to_im(prc.wt_bayes(img))
+            rec_img = prc.gaussian_filter(img)
             if histograms:
                 h_rec = mt.histogram(rec_img)
                 h = mt.histogram(img)
