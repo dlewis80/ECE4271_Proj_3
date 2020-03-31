@@ -20,7 +20,7 @@ if __name__ == "__main__":
     rang2 = (1,2,3,4,5)
     histograms = True
     stats = True
-    show = True
+    show = False
 
     paths =[]
     titles = []
